@@ -1,10 +1,10 @@
+
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { fonts } from "../utils/fonts";
+import { fonts } from "../utils/fonts"; 
+
 
 const CartCard = ({ item, handleDelete }) => {
-  const imageUrl =
-    "https://res.cloudinary.com/dlc5c1ycl/image/upload/v1710567613/cwlk21f74nd9iamrlzkh.png";
   return (
     <View style={styles.card}>
       <Image source={{ uri: item.image }} style={styles.image} />
@@ -14,7 +14,7 @@ const CartCard = ({ item, handleDelete }) => {
         <View style={styles.textCircleContainer}>
           <View
             style={[styles.circle, { backgroundColor: item?.color || "red" }]}
-          ></View>
+          />
           <View style={styles.sizeContainer}>
             <Text style={styles.sizeText}>{item.size}</Text>
           </View>
@@ -22,7 +22,7 @@ const CartCard = ({ item, handleDelete }) => {
       </View>
       <TouchableOpacity onPress={() => handleDelete(item.id)}>
         <Image
-          source={require("../assets/deleteIcon.png")}
+          source={require("../assets/deleteIcon.png")} // Ensure the delete icon is at this path
           style={styles.deleteIcon}
         />
       </TouchableOpacity>
@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
   sizeText: {
     fontSize: 18,
     fontWeight: "700",
+    color: "gray",
     fontFamily: fonts.medium,
   },
   textCircleContainer: {

@@ -27,7 +27,7 @@ const CartScreen = () => {
         data={cartItems}
         renderItem={({ item }) => (
           <CartCard item={item} handleDelete={handleDeleteItem} />
-        )}
+        )}  
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ marginTop: 40, paddingBottom: 200 }}
         ListFooterComponent={

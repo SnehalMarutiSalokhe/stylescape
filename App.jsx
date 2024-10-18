@@ -29,7 +29,7 @@ const MyHomeStack = () => {
 };
 
 const App = () => {
-  return (
+  return ( 
     <NavigationContainer>
       <CartProvider>
         <Tab.Navigator
